@@ -3,12 +3,13 @@ import quizLogo from "../../assets/quiz-app-logo.png";
 import "./quiz-header.css";
 import QuizOverlay from "./quiz-overlay";
 
-function QuizHeader({submitFunction}) {
-  const [timer, setTimer] = useState(200);
+function QuizHeader({submitFunction, quizLength}) {
+  const [timer, setTimer] = useState(0);
   const [submitMessage, setSubmitMessage] = useState(false)
   let timerId = useRef(null);
 
   useEffect(() => {
+      setTimer(quizLength*60)
       startTimer();
       return ()=>clearInterval(timerId.current);
   // eslint-disable-next-line react-hooks/exhaustive-deps

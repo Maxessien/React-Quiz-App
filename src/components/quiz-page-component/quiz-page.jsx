@@ -3,6 +3,7 @@ import QuizHeader from "./quiz-header";
 import QuizQuestions from "./quiz-questions";
 import QuizIntro from "./quiz-intro";
 import Results from "../Results/result-page";
+import { toast, ToastContainer } from "react-toastify";
 
 function QuizPage() {
   const [questions, setQuestions] = useState([]);
@@ -22,20 +23,25 @@ function QuizPage() {
       for (let i = 0; i < data.length; i++) {
         userAnswers.current[i] = "No Answer";
       }
-      console.log(userAnswers);
-    } catch (error) {
-      console.error(error);
+    } catch (err) {
+      err.message.toLowerCase.includes("failed to fetch")
+        ? toast.error("Network error, please check your internet connection")
+        : toast.error("Server Error, please try again later");
     }
   }
 
   async function submitQuiz() {
     try {
-      const fetchedAns = await fetch("https://raw.githubusercontent.com/Maxessien/Test-API-Fetch-/main/answer.json");
+      const fetchedAns = await fetch(
+        "https://raw.githubusercontent.com/Maxessien/Test-API-Fetch-/main/answer.json"
+      );
       const answersData = await fetchedAns.json();
       setCorrectAnswers(answersData);
       setSubmitted(true);
     } catch (err) {
-      console.error(err);
+      err.message.toLowerCase.includes("failed to fetch")
+        ? toast.error("Network error, please check your internet connection")
+        : toast.error("Server Error, please try again later");
     }
   }
 
@@ -49,7 +55,10 @@ function QuizPage() {
             <QuizIntro fetchFunc={fetchQuestions} />
           ) : (
             <div>
-              <QuizHeader submitFunction={submitQuiz} />
+              <QuizHeader
+                submitFunction={submitQuiz}
+                quizLength={questions.length}
+              />
               <QuizQuestions
                 data={questions}
                 submitFunction={submitQuiz}
@@ -59,6 +68,16 @@ function QuizPage() {
           )}
         </>
       )}
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={true}
+        closeOnClick={true}
+        pauseOnHover={true}
+        draggable={true}
+        theme="colored"
+      />
     </>
   );
 }

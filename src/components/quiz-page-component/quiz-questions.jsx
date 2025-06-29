@@ -4,6 +4,7 @@ import "./quiz-questions.css";
 function QuizQuestions({ data, submitFunction, userAns }) {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selected, setSelected] = useState(null);
+  const [submitText, setSubmitText] = useState("Submit")
   const selectedOptions = useRef([]);
 
   function handleSelection(index, e) {
@@ -80,7 +81,10 @@ function QuizQuestions({ data, submitFunction, userAns }) {
           {currentQuestion < data.length - 1 ? (
             <button onClick={nextQuestion}>Next</button>
           ) : (
-            <button onClick={submitFunction}>Submit</button>
+            <button onClick={()=>{
+              setSubmitText("Submiting...")
+              submitFunction()
+            }}>{submitText}</button>
           )}
         </nav>
       </main>
