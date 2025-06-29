@@ -1,0 +1,52 @@
+header {
+  padding: 1.25rem 3.125rem;
+  width: 100vw;
+  height: 6.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 0rem;
+  background: #f2f4f7;
+}
+@media (max-width: 30rem) {
+  header {
+    padding: 1.25rem 1.25rem;
+    height: 5.625rem;
+  }
+}
+header img {
+  height: 100%;
+  transform: scaleX(1.13);
+}
+header .timer {
+  font-size: 1.875rem;
+  font-weight: 700;
+  letter-spacing: 0.1125rem;
+  color: #222;
+  background-color: #fff;
+  padding: 0.2rem 0.6rem;
+  border-radius: 8px;
+  box-shadow: 1px 1px 6px black;
+}
+@media (max-width: 30rem) {
+  header .timer {
+    font-size: 1.5625rem;
+  }
+}
+header .danger {
+  animation: blink 1s linear infinite;
+  color: #ff4c4c;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

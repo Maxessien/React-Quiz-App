@@ -1,0 +1,23 @@
+.overlay{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.06rem;
+    background: rgba(0, 0, 0, 0.801);
+    color: rgb(230, 230, 230);
+    z-index: 999;
+}
+
+.overlay h2{
+    font-size: 2.81rem;
+}
+
+.overlay p{
+    font-size: 1.86rem;
+}

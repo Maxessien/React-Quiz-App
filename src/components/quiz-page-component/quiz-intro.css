@@ -1,0 +1,97 @@
+.intro-content {
+  background: rgb(231, 231, 231);
+  width: 90%;
+  max-width: 48rem;
+  margin: auto;
+  margin-top: 1.25rem;
+  padding: 1.25rem 1.5625rem;
+  border-radius: 0.3125rem;
+  animation: fadeUp 0.4s linear forwards;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  flex-direction: column;
+  gap: 0.9375rem;
+}
+@media (max-width: 30rem) {
+  .intro-content {
+    padding: 1.25rem 0.9375rem;
+  }
+}
+.intro-content h1 {
+  text-align: center;
+  color: rgb(0, 0, 39);
+  text-shadow: 1px 1px 2px black;
+  font-size: 1.875rem;
+}
+.intro-content .overview {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 0.3125rem;
+}
+.intro-content .overview p {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.intro-content .registry label {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+.intro-content .registry input {
+  width: 100%;
+  border: 2px solid black;
+  background: rgb(211, 211, 211);
+  border-radius: 0.3125rem;
+  padding: 0.625rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.intro-content .guidelines h2 {
+  color: rgb(0, 0, 39);
+  text-shadow: 0.8px 0.4px 2px black;
+  margin-bottom: 0.9375rem;
+}
+.intro-content .guide-list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 2.1875rem;
+}
+.intro-content .guide-list-items {
+  font-size: 1.125rem;
+  font-weight: 600;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 0.625rem;
+}
+@media (max-width: 48rem) {
+  .intro-content .guide-list-items {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+}
+.intro-content .guide-list-items span {
+  display: inline-block;
+}
+.intro-content .start {
+  background: rgb(0, 105, 0);
+  color: rgb(221, 221, 221);
+  text-shadow: 1px 1px 3px black;
+  font-size: 1.25rem;
+  width: max-content;
+  padding: 0.625rem 0.9375rem;
+  border-radius: 0.3125rem;
+  transition: all 300ms linear;
+  cursor: pointer;
+}
+.intro-content .start:hover {
+  transform: scale(1.02);
+  filter: brightness(1.2);
+}
