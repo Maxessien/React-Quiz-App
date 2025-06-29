@@ -30,7 +30,7 @@ function QuizPage() {
 
   async function submitQuiz() {
     try {
-      const fetchedAns = await fetch("/answers.json");
+      const fetchedAns = await fetch("https://raw.githubusercontent.com/Maxessien/Test-API-Fetch-/main/answer.json");
       const answersData = await fetchedAns.json();
       setCorrectAnswers(answersData);
       setSubmitted(true);
