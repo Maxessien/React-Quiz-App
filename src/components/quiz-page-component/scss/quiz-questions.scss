@@ -12,7 +12,7 @@
   }
 }
 
-main {
+.quiz-content {
   @include flex(flex-start, center, rem(15), column);
   background: rgb(230, 230, 230);
   padding: rem(20) rem(25);

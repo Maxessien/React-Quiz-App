@@ -1,4 +1,4 @@
-import "./result.css";
+import "./results.scss";
 
 function Results({ answersData, userAnswers }) {
   let total = 0;

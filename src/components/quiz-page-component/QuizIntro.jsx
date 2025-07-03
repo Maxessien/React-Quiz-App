@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './quiz-intro.css'
+import './scss/quiz-intro.scss'
 
 function QuizIntro({fetchFunc}) {
     const [loadingState, setLoadingState] = useState("Start Quiz")

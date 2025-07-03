@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import "./quiz-questions.css";
+import "./scss/quiz-questions.scss";
 
 function QuizQuestions({ data, submitFunction, userAns }) {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -43,7 +43,7 @@ function QuizQuestions({ data, submitFunction, userAns }) {
   }
   return (
     <div className="quiz-main-content">
-      <main>
+      <main className="quiz-content">
         <h2 className="question">{data[currentQuestion].question}</h2>
 
         <ul className="options">

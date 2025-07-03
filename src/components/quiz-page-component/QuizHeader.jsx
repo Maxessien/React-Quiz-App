@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import quizLogo from "../../assets/quiz-app-logo.png";
-import "./quiz-header.css";
-import QuizOverlay from "./quiz-overlay";
+import quizLogo from "/quiz-app-logo.png";
+import "./scss/quiz-header.scss";
+import QuizOverlay from "./QuizOverlay";
 
 function QuizHeader({submitFunction, quizLength}) {
   const [timer, setTimer] = useState(0);
@@ -37,7 +37,7 @@ function QuizHeader({submitFunction, quizLength}) {
 
   return (
     <>
-      <header>
+      <header className="quiz-header">
         <img src={quizLogo} alt="logo" />
         <div className={`timer ${timer<=10 ? "danger" : ""}`}>
           {minute.toString().padStart(2, '0')}:{seconds.toString().padStart(2, '0')}
@@ -50,3 +50,4 @@ function QuizHeader({submitFunction, quizLength}) {
 }
 
 export default QuizHeader;
+

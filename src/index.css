@@ -98,11 +98,7 @@ select {
 }
 
 body {
-  background: url("./assets/PE.webp");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
   min-height: 100vh;
+  margin-top: 0;
   font-family: "Inter", sans-serif;
 }

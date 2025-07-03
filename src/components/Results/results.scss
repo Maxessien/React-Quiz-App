@@ -8,6 +8,9 @@
   border-radius: rem(5);
   margin: rem(20) auto;
   background: rgb(230, 230, 230);
+  @include media(small){
+    padding: rem(25) rem(10);
+  }
   h1 {
     color: rgb(0, 0, 44);
     text-shadow: 0.3px 0px 1.4px black;

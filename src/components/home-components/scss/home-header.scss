@@ -1,0 +1,41 @@
+@use 'functions_mixins' as *;
+
+.home-header{
+  padding: rem(10) rem(50);
+  width: 100vw;
+  height: rem(80);
+  @include flex(center, space-between);
+  background: #f2f4f7;
+  @include media(small){
+    padding: rem(20) rem(20);
+  height: rem(90);
+  }
+  img {
+    height: 100%;
+    transform: scaleX(1.13);
+  }
+}
+
+.logo-seperator{
+    @include flex(center, center, rem(20));
+    .home-nav{
+        &-list{
+            @include flex(center, center, rem(15));
+            li{
+                a{
+                    color: rgb(0, 0, 36);
+                    font-size: rem(18);
+                    font-weight: 500;
+                    transition: all 200ms linear;
+                    &:hover{
+                        color: rgb(11, 129, 175);
+                    }
+                }
+                .current{
+                    color: rgb(59, 0, 114);
+                }
+            }
+        }
+
+    }
+}

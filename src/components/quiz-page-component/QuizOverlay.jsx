@@ -1,5 +1,3 @@
-import "./quiz-overlay.css"
-
 function QuizOverlay(){
     return (
         <>
