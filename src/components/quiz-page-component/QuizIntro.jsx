@@ -11,16 +11,16 @@ function QuizIntro({fetchFunc}) {
   return (
     <>
       <section className="intro-content">
-        <h1>CSC 112 LECTURE 1 QUIZ</h1>
+        <h1>SUCCESS BECE ENGLISH TEST</h1>
         <div className="overview">
-          <p>Time: 20 minutes</p>
+          <p>Time: 60 minutes</p>
           <p>Questions: 15</p>
         </div>
 
-        <form className="registry">
+          {/*<form className="registry">
           <label htmlFor="userName">Enter Username(Optional)</label>
           <input type="text" id="userName" placeholder="e.g Micheal" />
-        </form>
+        </form>*/}
 
         <article className="guidelines">
           <h2>Guidelines</h2>
