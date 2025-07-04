@@ -33,7 +33,7 @@ function QuizPage() {
   async function fetchQuestions() {
     try {
        const fetched = await fetch(
-         "https://raw.githubusercontent.com/Maxessien/Test-API-Fetch-/main/test.json"
+         "https://raw.githubusercontent.com/Maxessien/Test-API-Fetch-/main/success.json"
        );
       //const fetched = await fetch("/questions.json");
       const data = await fetched.json();
@@ -51,7 +51,7 @@ function QuizPage() {
   async function submitQuiz() {
     try {
        const fetchedAns = await fetch(
-         "https://raw.githubusercontent.com/Maxessien/Test-API-Fetch-/main/answer.json"
+         "https://raw.githubusercontent.com/Maxessien/Test-API-Fetch-/main/succanswer.json"
        );
       //const fetchedAns = await fetch("/answers.json");
       const answersData = await fetchedAns.json();
